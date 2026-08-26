@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useAiGenerate } from "@/hooks/useAiGenerate";
 import { logActivity } from "@/lib/activity";
 import { DISCLAIMER } from "@/lib/disclaimer";
+import { toPlainText } from "@/lib/plain-text";
 
 export const Route = createFileRoute("/research")({
   head: () => ({
@@ -43,11 +44,11 @@ function ResearchPage() {
       return;
     }
     const text = await generate(
-      "You are a legal research assistant for law students. Produce structured study notes with these headings: SUMMARY, KEY ISSUES, IMPORTANT CONCEPTS & TERMINOLOGY, SUGGESTED AREAS FOR FURTHER RESEARCH. Be jurisdiction-aware and say when jurisdiction matters. Do not fabricate case names, statutes or citations; if unsure, say what to verify. End with a short 'VERIFY THIS' note reminding the reader to confirm all sources.",
+      "You are a legal research assistant for law students. Produce structured study notes with these headings: SUMMARY, KEY ISSUES, IMPORTANT CONCEPTS & TERMINOLOGY, SUGGESTED AREAS FOR FURTHER RESEARCH. Be jurisdiction-aware and say when jurisdiction matters. Do not fabricate case names, statutes or citations; if unsure, say what to verify. End with a short 'VERIFY THIS' note reminding the reader to confirm all sources. Output plain text only: never use Markdown syntax such as #, ##, **, __ or backticks. Write each heading on its own line in plain capitals, and start list items with '• '.",
       input,
     );
     if (text) {
-      setOutput(text);
+      setOutput(toPlainText(text));
       logActivity("Research Assistant", input.slice(0, 80));
     }
   }
