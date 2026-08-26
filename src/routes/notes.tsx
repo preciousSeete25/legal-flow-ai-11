@@ -52,7 +52,7 @@ function NotesPage() {
     );
     if (text) {
       setOutput(text);
-      logActivity("Notes Summarizer", input.split("\n")[0]);
+      logActivity("Notes Summarizer", input.split("\n")[0] ?? "Meeting notes");
     }
   }
 

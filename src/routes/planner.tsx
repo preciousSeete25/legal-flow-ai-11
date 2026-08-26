@@ -46,11 +46,11 @@ function parseSchedule(text: string): Row[] {
     .filter((l) => l.includes("|"))
     .map((l) => l.split("|").map((p) => p.trim()))
     .filter((p) => p.length >= 4 && !/^priority$/i.test(p[0]))
-    .map((p) => ({ priority: p[0], day: p[1], slot: p[2], task: p.slice(3).join(" — ") }));
+    .map((p) => ({ priority: p[0] ?? "", day: p[1] ?? "", slot: p[2] ?? "", task: p.slice(3).join(" — ") }));
 }
 
 function priorityClass(p: string) {
-  const v = p.toLowerCase();
+  const v = (p ?? "").toLowerCase();
   if (v.startsWith("high")) return "bg-destructive/10 text-destructive border-destructive/30";
   if (v.startsWith("med")) return "bg-accent/20 text-accent-foreground border-accent/40";
   return "bg-secondary text-secondary-foreground border-border";
