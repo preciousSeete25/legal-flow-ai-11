@@ -45,7 +45,7 @@ function parseSchedule(text: string): Row[] {
     .map((l) => l.trim())
     .filter((l) => l.includes("|"))
     .map((l) => l.split("|").map((p) => p.trim()))
-    .filter((p) => p.length >= 4 && !/^priority$/i.test(p[0]))
+    .filter((p) => p.length >= 4 && !/^priority$/i.test(p[0] ?? ""))
     .map((p) => ({ priority: p[0] ?? "", day: p[1] ?? "", slot: p[2] ?? "", task: p.slice(3).join(" — ") }));
 }
 
