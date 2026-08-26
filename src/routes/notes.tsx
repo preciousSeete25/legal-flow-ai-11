@@ -48,11 +48,11 @@ function NotesPage() {
       return;
     }
     const text = await generate(
-      "You summarise legal meeting and consultation notes. Use these headings: MAIN DISCUSSION POINTS, DECISIONS TAKEN, ACTION ITEMS (each as: task — responsible person — deadline), OPEN QUESTIONS. Use only information present in the notes; write 'not stated' where something is missing. Be concise and professional.",
+      "You summarise legal meeting and consultation notes. Use these headings: MAIN DISCUSSION POINTS, DECISIONS TAKEN, ACTION ITEMS (each as: task — responsible person — deadline), OPEN QUESTIONS. Use only information present in the notes; write 'not stated' where something is missing. Be concise and professional. Output plain text only: never use Markdown syntax such as #, ##, **, __ or backticks. Write each heading on its own line in plain capitals, and start list items with '• '.",
       input,
     );
     if (text) {
-      setOutput(text);
+      setOutput(toPlainText(text));
       logActivity("Notes Summarizer", input.split("\n")[0] ?? "Meeting notes");
     }
   }
