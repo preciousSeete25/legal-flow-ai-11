@@ -1,76 +1,63 @@
 # LegalFlow AI Assistant
 
-Create a modern, responsive web application called LegalFlow AI.
+LegalFlow AI is a responsive AI-powered productivity application designed for law students and junior legal professionals. It helps users complete common legal study and workplace tasks more efficiently through one professional dashboard.
 
-LegalFlow AI is an AI productivity assistant designed for law students and junior legal professionals. It should help users manage legal studies and workplace tasks more efficiently.
+## Project Overview
 
-Create a professional dashboard with sidebar navigation and the following four tools:
+Law students and junior legal professionals often need to manage research, professional communication, deadlines and lengthy notes at the same time. LegalFlow AI brings these tasks together in one accessible platform with editable AI-generated outputs.
 
-1. Professional Email Generator
+## Features
 
-Allow users to enter the recipient, email purpose and important details. Include tone options such as formal, friendly and persuasive. Generate a professional, editable email with copy and clear buttons.
+### Professional Email Generator
 
-2. Legal Research Assistant
+Creates professional emails using the recipient, purpose and important details entered by the user. Users can select formal, friendly or persuasive tones and edit, copy or download the result.
 
-Allow users to paste a legal topic, question or article. Generate an editable summary containing key issues, important concepts and suggested areas for further research. Clearly state that users must verify legal information using reliable sources.
+### Legal Research Assistant
 
-3. AI Task Planner
+Summarises legal topics, questions and articles into structured study notes. It identifies key issues, important legal concepts and areas for further research.
 
-Allow users to enter assignments, work tasks, deadlines and available study hours. Generate a prioritised daily or weekly schedule. Include priority labels and checkboxes for completed tasks.
+### AI Task Planner
 
-4. Meeting and Consultation Notes Summarizer
+Turns assignments, workplace tasks, deadlines and available hours into a prioritised daily or weekly schedule. It includes time slots, priority labels and completion checkboxes.
 
-Allow users to paste long meeting or consultation notes. Produce an editable summary showing the main discussion points, decisions, action items, responsible persons and deadlines.
+### Meeting and Consultation Notes Summarizer
 
-Design requirements:
+Converts lengthy meeting or consultation notes into clear discussion points, decisions, action items, responsible persons and deadlines.
 
-- Modern dashboard layout
+## Application Structure
 
+- Modern dashboard
 - Sidebar navigation
-
-- Separate page or section for every tool
-
-- Professional navy blue, cream and gold colour palette
-
 - Responsive mobile and desktop design
-
-- Clear input and output sections
-
+- Separate input and output sections
 - Editable AI-generated outputs
-
 - Copy, download and clear buttons
+- Recent activity section
+- Loading indicators and error handling
+- Responsible AI disclaimer
 
-- Loading indicators and helpful error messages
+## Tools Used
 
-- A simple recent-activity section
+- Lovable AI
+- GitHub
+- React
+- TypeScript
+- Tailwind CSS
 
-- Clean and professional SaaS-style design
+## Setup Instructions
 
-- Use realistic sample content
+1. Clone this repository.
+2. Open the project folder in a code editor.
+3. Install the required dependencies using `npm install`.
+4. Start the development server using `npm run dev`.
+5. Open the local address displayed in the terminal.
 
-- Do not require users to create an account for the first version
+## Responsible AI
 
-Add this responsible AI disclaimer in the footer and on the research page:
+LegalFlow AI provides general assistance only and does not constitute legal advice. AI-generated information may contain errors. Users must verify important legal information using reliable and official sources. Users should avoid entering confidential or sensitive client information.
 
-“LegalFlow AI provides general assistance only and does not constitute legal advice. AI-generated information may contain errors. Users must verify important legal information using reliable and official sources.”
+## Project Creator
 
-This project was built with [Lovable](https://lovable.dev).
+**Precious Seete**
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4c1e3687-59c6-4d23-9710-784cb688d19e).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Law student with an interest in artificial intelligence, legal technology and responsible AI.
