@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useAiGenerate } from "@/hooks/useAiGenerate";
 import { logActivity } from "@/lib/activity";
 import { DISCLAIMER } from "@/lib/disclaimer";
+import { toPlainText } from "@/lib/plain-text";
 
 export const Route = createFileRoute("/research")({
   head: () => ({
