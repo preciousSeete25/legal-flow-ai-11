@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useAiGenerate } from "@/hooks/useAiGenerate";
 import { logActivity } from "@/lib/activity";
+import { toPlainText } from "@/lib/plain-text";
 
 export const Route = createFileRoute("/notes")({
   head: () => ({
